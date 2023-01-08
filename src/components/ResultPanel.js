@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { animated, useSpring } from "react-spring";
-import ReactMarkdown from "react-markdown";
 import { mutate, number } from "../hexagrams";
 import Hexagram from "./Hexagram";
+import MDHexagramText from "./MDHexagramText";
 import StateContext from "./StateContext";
-import texts from "../assets/markdown/ryk";
 
 /* const Title = ({ number }) => <h3>{`${number}. ${name(number)}`}</h3>;
 
@@ -43,37 +42,6 @@ const Text = ({ number }) => (
       })}
   </>
 ) */
-
-const MDHexagramText = ({ hexagramNumber }) => {
-  const [markdown, setMarkdown] = useState("");
-
-  useEffect(() => {
-    let isMounted = true;
-
-    fetch(texts[hexagramNumber - 1])
-      .then((response) => response.text())
-      .then((text) => {
-        if (isMounted) {
-          setMarkdown(text);
-        }
-      });
-
-    return () => {
-      isMounted = false;
-    };
-  }, [hexagramNumber]);
-
-  return (
-    <ReactMarkdown
-      children={markdown}
-      components={{
-        h1: "h3",
-        h2: "h4",
-        h3: "h5",
-      }}
-    />
-  );
-};
 
 const ResultPanel = () => {
   const { hexagram } = useContext(StateContext);
