@@ -61,11 +61,15 @@ const AppContainer = () => {
   return (
     <StateContext.Provider value={{ theme, step, hexagram, coinResult }}>
       <div className={`app-container ${theme}`}>
-        {(step === "start" || step === "coinshuffle") && (
-          <StartButton onStart={onStart} />
-        )}
-        {step === "coinshuffle" && <CoinShuffle />}
-        {step === "result" && <ResultPanel />}
+        <div className='vertical-scroll'>
+          <div className='contents'>
+            {(step === "start" || step === "coinshuffle") && (
+              <StartButton onStart={onStart} />
+            )}
+            {step === "coinshuffle" && <CoinShuffle />}
+            {step === "result" && <ResultPanel />}
+          </div>
+        </div>
         {step !== "start" && <BackButton onBack={onBack} />}
         <DarkmodeSwitch changeTheme={changeTheme} />
       </div>
