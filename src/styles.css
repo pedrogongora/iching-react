@@ -324,12 +324,14 @@ html, body {
 .result h3 {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1.4rem;
+  font-weight: bold;
   line-height: 120%;
 }
 
 .result h4 {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1.2rem;
+  font-weight: bold;
   line-height: 120%;
 }
 
@@ -351,8 +353,13 @@ html, body {
 }
 
 .result blockquote {
-  padding: 1rem 2.5rem;
+  padding: 1rem 1rem;
   font-weight: bold;
+}
+@media (min-width: 640px) {
+  .result blockquote {
+    padding: 1rem 2.5rem;
+  }
 }
 
 .result pre {
