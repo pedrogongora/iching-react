@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import seedrandom from "seedrandom";
 import StateContext from "./StateContext";
 import CoinShuffle from "./CoinShuffle";
@@ -6,6 +6,9 @@ import ResultPanel from "./ResultPanel";
 import StartButton from "./StartButton";
 import DarkmodeSwitch from "./DarkmodeSwitch";
 import BackButton from "./BackButton";
+import LogbookButton from "./LogbookButton";
+import Logbook from "./Logbook";
+import { findEntry, loadJournal, saveEntry } from "../util/journal";
 
 const rng = new seedrandom();
 
@@ -14,15 +17,32 @@ const defaultTheme = window.localStorage.getItem("theme") ?? "light";
 const AppContainer = () => {
   // theme: 'light' | 'dark'
   const [theme, setTheme] = useState(defaultTheme);
-
   // step: 'start' | 'coinshuffle' | 'result'
   const [step, setStep] = useState("start");
-
   // hexagram: [number]
   const [hexagram, setHexagram] = useState([]);
-
   // coinResult: [number]
   const [coinResult, setCoinResult] = useState([]);
+  // showLogbook: boolean
+  const [showLogbook, setShowLogbook] = useState(false);
+  const [sessionTimestamp, setSessionTimestamp] = useState(undefined);
+
+  // save session to journal
+  useEffect(() => {
+    if (hexagram.length === 6) {
+      const timestamp = new Date().toISOString();
+      setSessionTimestamp(timestamp);
+      const journal = loadJournal();
+      const prevEntry = findEntry(timestamp, journal);
+      if (!prevEntry) {
+        saveEntry({
+          sessionTimestamp: timestamp,
+          hexagram,
+          comments: "",
+        });
+      }
+    }
+  }, [hexagram]);
 
   // start/toss coins button callback
   const onStart = () => {
@@ -59,14 +79,22 @@ const AppContainer = () => {
   };
 
   return (
-    <StateContext.Provider value={{ theme, step, hexagram, coinResult }}>
+    <StateContext.Provider
+      value={{ theme, step, hexagram, coinResult, sessionTimestamp }}
+    >
       <div className={`app-container ${theme}`}>
-        {(step === "start" || step === "coinshuffle") && (
-          <StartButton onStart={onStart} />
-        )}
-        {step === "coinshuffle" && <CoinShuffle />}
-        {step === "result" && <ResultPanel />}
+        <div className="vertical-scroll">
+          <div className="contents">
+            {(step === "start" || step === "coinshuffle") && (
+              <StartButton onStart={onStart} />
+            )}
+            {step === "coinshuffle" && <CoinShuffle />}
+            {step === "result" && <ResultPanel hexagram={hexagram} />}
+          </div>
+        </div>
         {step !== "start" && <BackButton onBack={onBack} />}
+        {showLogbook && <Logbook onClose={() => setShowLogbook(false)} />}
+        <LogbookButton onClick={() => setShowLogbook((s) => !s)} />
         <DarkmodeSwitch changeTheme={changeTheme} />
       </div>
     </StateContext.Provider>

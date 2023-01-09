@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
-import { animated, useSpring } from 'react-spring'
-import { mutate, name, text, number } from '../hexagrams'
-import Hexagram from './Hexagram'
-import StateContext from './StateContext'
+import React, { useContext } from "react";
+import { animated, useSpring } from "react-spring";
+import { mutate, number } from "../hexagrams";
+import Hexagram from "./Hexagram";
+import MDHexagramText from "./MDHexagramText";
+import StateContext from "./StateContext";
 
-const Title = ({ number }) => <h3>{`${number}. ${name(number)}`}</h3>
+/* const Title = ({ number }) => <h3>{`${number}. ${name(number)}`}</h3>;
 
 const Paragraph = ({ text }) => <pre>{text}</pre>
 
@@ -40,38 +41,35 @@ const Text = ({ number }) => (
         }
       })}
   </>
-)
+) */
 
-const ResultPanel = () => {
-  const { hexagram } = useContext(StateContext)
+const ResultPanel = ({ hexagram }) => {
   const animProps = useSpring({
     opacity: 1,
     from: { opacity: 0 },
     config: { tension: 300 },
-  })
+  });
 
-  const hexagram2 = mutate(hexagram)
-  const hexNum1 = number(hexagram)
-  const hexNum2 = number(hexagram2)
+  const hexagram2 = mutate(hexagram);
+  const hexNum1 = number(hexagram);
+  const hexNum2 = number(hexagram2);
 
   return (
     <animated.div className="result" style={animProps}>
-      <Title number={hexNum1} />
       <Hexagram lines={hexagram} />
-      <Text number={hexNum1} />
+      <MDHexagramText hexagramNumber={hexNum1} />
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       {hexNum1 !== hexNum2 && (
         <>
-          <Title number={hexNum2} />
           <Hexagram lines={hexagram2} />
-          <Text number={hexNum2} />
+          <MDHexagramText hexagramNumber={hexNum2} />
           <p>&nbsp;</p>
           <p>&nbsp;</p>
         </>
       )}
     </animated.div>
-  )
-}
+  );
+};
 
-export default ResultPanel
+export default ResultPanel;
