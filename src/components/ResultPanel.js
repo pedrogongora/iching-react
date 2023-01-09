@@ -43,8 +43,7 @@ const Text = ({ number }) => (
   </>
 ) */
 
-const ResultPanel = () => {
-  const { hexagram } = useContext(StateContext);
+const ResultPanel = ({ hexagram }) => {
   const animProps = useSpring({
     opacity: 1,
     from: { opacity: 0 },

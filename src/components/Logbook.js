@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Journal from "./Journal";
 import MDHexagramText from "./MDHexagramText";
 import StateContext from "./StateContext";
 
@@ -32,9 +33,10 @@ const HexagramList = () => {
         <ul>
           {new Array(64).fill().map((_, i) => (
             <li key={`hex-link-${i}`}>
-              <button onClick={itemClickHandler(i + 1)}>{`Hexagrama ${
-                i + 1
-              }`}</button>
+              <div
+                className="hexagram-list-button"
+                onClick={itemClickHandler(i + 1)}
+              >{`Hexagrama ${i + 1}`}</div>
             </li>
           ))}
         </ul>
@@ -53,12 +55,14 @@ const HexagramList = () => {
 
 const Logbook = ({ onClose }) => {
   const { theme } = useContext(StateContext);
+  const [tab, setTab] = useState("hexagrams-tab");
+
   return (
     <div className="logbook">
       <div className={`logbook-window ${theme}`}>
-        <div className="logbook-topbar"></div>
         <div className="logbook-contents">
-          <HexagramList />
+          {tab === "hexagrams-tab" && <HexagramList />}
+          {tab === "journal-tab" && <Journal />}
         </div>
         <button
           type="button"
@@ -67,6 +71,26 @@ const Logbook = ({ onClose }) => {
         >
           &times;
         </button>
+        <div className={`logbook-topbar ${theme} ${tab}`}>
+          <ul>
+            <li>
+              <div
+                className={`${tab === "hexagrams-tab" ? "selected" : ""}`}
+                onClick={() => setTab("hexagrams-tab")}
+              >
+                Hexagramas
+              </div>
+            </li>
+            <li>
+              <div
+                className={`${tab === "journal-tab" ? "selected" : ""}`}
+                onClick={() => setTab("journal-tab")}
+              >
+                Bitácora
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

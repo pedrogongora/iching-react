@@ -3,18 +3,18 @@
   --light-background: #eee;
   --dark-foreground: #eee;
   --dark-background: #222;
-  --font: 'Cantarell', sans-serif;
+  --font: "Cantarell", sans-serif;
   --hexagram-width: 10rem;
   --hexagram-height: 7rem;
   --coin-width: 1.8rem;
 }
 
 @font-face {
-  font-family: 'Cantarell';
-  src: url('./Cantarell-Regular.ttf') format('truetype'),
-    url('./Cantarell-Bold.ttf') format('truetype'),
-    url('./Cantarell-BoldItalic.ttf') format('truetype'),
-    url('./Cantarell-Italic.ttf') format('truetype');
+  font-family: "Cantarell";
+  src: url("./Cantarell-Regular.ttf") format("truetype"),
+    url("./Cantarell-Bold.ttf") format("truetype"),
+    url("./Cantarell-BoldItalic.ttf") format("truetype"),
+    url("./Cantarell-Italic.ttf") format("truetype");
 }
 
 .clearfix::after {
@@ -23,7 +23,8 @@
   display: table;
 }
 
-html, body {
+html,
+body {
   position: relative;
   margin: 0;
   padding: 0;
@@ -80,14 +81,14 @@ html, body {
   top: 56%;
   left: 50%;
   width: 70%;
-  padding: .6rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border: none;
   font-family: var(--font);
   font-size: 1rem;
   border-width: 2pt;
   border-style: solid;
   transform: translate(-50%, -50%);
-  transition: top .4s ease-in-out;
+  transition: top 0.4s ease-in-out;
   user-select: none;
 }
 
@@ -109,14 +110,12 @@ html, body {
   color: var(--light-foreground);
   background-color: var(--light-background);
   border-color: var(--light-foreground);
-  
 }
 
 .start-button.light:active {
   color: var(--light-background);
   background-color: var(--light-foreground);
   border-color: var(--light-foreground);
-  
 }
 
 .start-button.dark {
@@ -133,7 +132,7 @@ html, body {
 
 .start-button:focus {
   outline: none;
-  box-shadow: 0 0 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
@@ -222,7 +221,7 @@ html, body {
 }
 
 .coinshuffle-container {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .coinshuffle-container .hexagram {
@@ -247,7 +246,7 @@ html, body {
   width: var(--coin-width);
   height: var(--coin-width);
   transform: translateY(-50%);
-  transition: width .05s ease;
+  transition: width 0.05s ease;
 }
 
 .coin0 {
@@ -266,7 +265,7 @@ html, body {
   .coin {
     transform: translateY(-100%);
   }
-  
+
   .coin0 {
     left: 15%;
   }
@@ -281,7 +280,7 @@ html, body {
 }
 
 .coin > circle {
-  stroke-width: .5pt;
+  stroke-width: 0.5pt;
   stroke: #888;
 }
 
@@ -308,71 +307,63 @@ html, body {
   /* overflow: auto; */
 }
 .result::-webkit-scrollbar {
-    -webkit-appearance: scrollbartrack-vertical;
+  -webkit-appearance: scrollbartrack-vertical;
 }
 .result::-webkit-scrollbar {
-   -webkit-appearance: scrollbarthumb-vertical;
+  -webkit-appearance: scrollbarthumb-vertical;
 }
 
 .result .hexagram {
   position: relative;
-  top: .6rem;
+  top: 0.6rem;
   left: calc(50% - (var(--hexagram-width) / 2));
-  padding: .6rem 0 .4rem 0;
+  padding: 0.6rem 0 0.4rem 0;
   margin-bottom: 1.3rem;
 }
 
-.result h3,
-.logbook .hexagram-list h3 {
-  padding: .4rem .4rem 1rem .4rem;
+h3 {
+  padding: 0.4rem 0.4rem 1rem 0.4rem;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result h4,
-.logbook .hexagram-list h4 {
-  padding: .4rem .4rem 1rem .4rem;
+h4 {
+  padding: 0.4rem 0.4rem 1rem 0.4rem;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result h5,
-.logbook .hexagram-list h5 {
-  padding: .4rem .4rem 1rem .4rem;
-  font-size: 1.0rem;
+h5 {
+  padding: 0.4rem 0.4rem 1rem 0.4rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result p,
-.logbook .hexagram-list p {
-  padding: .4rem .4rem 1rem .4rem;
+p {
+  padding: 0.4rem 0.4rem 1rem 0.4rem;
   font-size: 1rem;
   line-height: 120%;
 }
 
-.result strong,
-.logbook .hexagram-list strong {
+strong {
   font-weight: bold;
 }
 
-.result blockquote,
-.logbook .hexagram-list blockquote {
+blockquote {
   padding: 1rem 1rem;
   font-weight: bold;
 }
 @media (min-width: 640px) {
-  .result blockquote,
-  .logbook .hexagram-list blockquote {
+  blockquote {
     padding: 1rem 2.5rem;
   }
 }
 
-.result pre,
-.logbook .hexagram-list pre {
-  padding: .4rem;
+pre {
+  padding: 0.4rem;
   font-family: var(--font);
   font-size: 1rem;
   line-height: 112%;
@@ -445,11 +436,6 @@ html, body {
   background-color: var(--light-background);
 }
 
-.logbook .logbook-topbar {
-  padding: .5rem;
-  text-align: right;
-}
-
 .logbook .logbook-close-button {
   position: absolute;
   top: 0.5rem;
@@ -493,20 +479,23 @@ html, body {
   flex-direction: column;
   list-style-position: inside;
   list-style-type: disc;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 .logbook .hexagram-list li {
-  padding: 0.2rem 0;
+  padding: 0.3rem 0;
 }
 
-.logbook .hexagram-list button {
+.logbook .hexagram-list-button {
+  display: inline-block;
   border: 0;
   background-color: transparent;
   color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
 }
-.logbook .hexagram-list button:hover {
+.logbook .hexagram-list-button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -535,4 +524,101 @@ html, body {
   padding: 2.5rem 0;
   overflow-y: auto;
   box-sizing: border-box;
+}
+
+.logbook .logbook-topbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logbook-topbar ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.logbook-topbar li {
+  width: 8rem;
+  color: inherit;
+  background-color: transparent;
+}
+
+.logbook-topbar li div {
+  padding: 1rem 0.2rem;
+  text-align: center;
+}
+.logbook-topbar.dark li div:hover {
+  cursor: pointer;
+  border-bottom: 1pt solid var(--dark-foreground);
+}
+.logbook-topbar.light li div:hover {
+  cursor: pointer;
+  border-bottom: 1pt solid var(--light-foreground);
+}
+.logbook-topbar.dark li div.selected {
+  border-bottom: 1pt solid var(--dark-foreground);
+}
+.logbook-topbar.light li div.selected {
+  border-bottom: 1pt solid var(--light-foreground);
+}
+
+.journal {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.journal ul {
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.journal .journal-entry {
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+.journal .journal-entry:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.journal .journal-contents {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.journal .journal-back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 1.3rem;
+  border: none;
+}
+.journal .journal-back-button:hover {
+  cursor: pointer;
+}
+.journal .journal-back-button.light {
+  stroke: var(--light-foreground);
+  fill: var(--light-foreground);
+}
+.journal .journal-back-button.dark {
+  stroke: var(--dark-foreground);
+  fill: var(--dark-foreground);
+}
+
+.journal .entry-data {
+  padding: 3rem 2rem;
+}
+
+.journal .entry-data > div {
+  padding: 1rem 0;
+}
+
+.journal .result {
+  padding: 2rem 0rem;
 }
