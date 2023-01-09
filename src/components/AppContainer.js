@@ -6,6 +6,8 @@ import ResultPanel from "./ResultPanel";
 import StartButton from "./StartButton";
 import DarkmodeSwitch from "./DarkmodeSwitch";
 import BackButton from "./BackButton";
+import LogbookButton from "./LogbookButton";
+import Logbook from "./Logbook";
 
 const rng = new seedrandom();
 
@@ -14,15 +16,14 @@ const defaultTheme = window.localStorage.getItem("theme") ?? "light";
 const AppContainer = () => {
   // theme: 'light' | 'dark'
   const [theme, setTheme] = useState(defaultTheme);
-
   // step: 'start' | 'coinshuffle' | 'result'
   const [step, setStep] = useState("start");
-
   // hexagram: [number]
   const [hexagram, setHexagram] = useState([]);
-
   // coinResult: [number]
   const [coinResult, setCoinResult] = useState([]);
+  // showLogbook: boolean
+  const [showLogbook, setShowLogbook] = useState(false);
 
   // start/toss coins button callback
   const onStart = () => {
@@ -61,8 +62,8 @@ const AppContainer = () => {
   return (
     <StateContext.Provider value={{ theme, step, hexagram, coinResult }}>
       <div className={`app-container ${theme}`}>
-        <div className='vertical-scroll'>
-          <div className='contents'>
+        <div className="vertical-scroll">
+          <div className="contents">
             {(step === "start" || step === "coinshuffle") && (
               <StartButton onStart={onStart} />
             )}
@@ -71,6 +72,8 @@ const AppContainer = () => {
           </div>
         </div>
         {step !== "start" && <BackButton onBack={onBack} />}
+        {showLogbook && <Logbook onClose={() => setShowLogbook(false)} />}
+        <LogbookButton onClick={() => setShowLogbook((s) => !s)} />
         <DarkmodeSwitch changeTheme={changeTheme} />
       </div>
     </StateContext.Provider>

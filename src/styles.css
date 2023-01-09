@@ -88,6 +88,7 @@ html, body {
   border-style: solid;
   transform: translate(-50%, -50%);
   transition: top .4s ease-in-out;
+  user-select: none;
 }
 
 .start-button:hover {
@@ -321,48 +322,56 @@ html, body {
   margin-bottom: 1.3rem;
 }
 
-.result h3 {
+.result h3,
+.logbook .hexagram-list h3 {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result h4 {
+.result h4,
+.logbook .hexagram-list h4 {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result h5 {
+.result h5,
+.logbook .hexagram-list h5 {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1.0rem;
   font-weight: bold;
   line-height: 120%;
 }
 
-.result p {
+.result p,
+.logbook .hexagram-list p {
   padding: .4rem .4rem 1rem .4rem;
   font-size: 1rem;
   line-height: 120%;
 }
 
-.result strong {
+.result strong,
+.logbook .hexagram-list strong {
   font-weight: bold;
 }
 
-.result blockquote {
+.result blockquote,
+.logbook .hexagram-list blockquote {
   padding: 1rem 1rem;
   font-weight: bold;
 }
 @media (min-width: 640px) {
-  .result blockquote {
+  .result blockquote,
+  .logbook .hexagram-list blockquote {
     padding: 1rem 2.5rem;
   }
 }
 
-.result pre {
+.result pre,
+.logbook .hexagram-list pre {
   padding: .4rem;
   font-family: var(--font);
   font-size: 1rem;
@@ -389,4 +398,141 @@ html, body {
 .darkmode-switch.dark {
   stroke: var(--dark-foreground);
   fill: var(--dark-foreground);
+}
+
+.logbook-button {
+  position: fixed;
+  top: 1rem;
+  right: 3.5rem;
+  width: 1.3rem;
+}
+
+.logbook-button:hover {
+  cursor: pointer;
+}
+
+.logbook-button.light {
+  stroke: var(--light-foreground);
+  fill: var(--light-foreground);
+}
+
+.logbook-button.dark {
+  stroke: var(--dark-foreground);
+  fill: var(--dark-foreground);
+}
+
+.logbook {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logbook .logbook-window {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+
+.logbook .logbook-window.dark {
+  background-color: var(--dark-background);
+}
+.logbook .logbook-window.light {
+  background-color: var(--light-background);
+}
+
+.logbook .logbook-topbar {
+  padding: .5rem;
+  text-align: right;
+}
+
+.logbook .logbook-close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  user-select: none;
+}
+
+.logbook .logbook-close-button:hover {
+  cursor: pointer;
+}
+
+.logbook .logbook-close-button.dark {
+  color: var(--dark-foreground);
+}
+.logbook .logbook-close-button.light {
+  color: var(--light-foreground);
+}
+
+.logbook .logbook-contents {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.logbook .hexagram-list {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.logbook .hexagram-list ul {
+  display: flex;
+  flex-direction: column;
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.logbook .hexagram-list li {
+  padding: 0.2rem 0;
+}
+
+.logbook .hexagram-list button {
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+}
+.logbook .hexagram-list button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logbook .hexagram-list .log-back-button {
+  position: absolute;
+  top: 0.23rem;
+  left: 0.5rem;
+  width: 1.3rem;
+  border: none;
+}
+.logbook .hexagram-list .log-back-button:hover {
+  cursor: pointer;
+}
+.logbook .hexagram-list .log-back-button.light {
+  stroke: var(--light-foreground);
+  fill: var(--light-foreground);
+}
+.logbook .hexagram-list .log-back-button.dark {
+  stroke: var(--dark-foreground);
+  fill: var(--dark-foreground);
+}
+
+.logbook .hexagram-list .hexagram-text {
+  height: 100%;
+  padding: 2.5rem 0;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
