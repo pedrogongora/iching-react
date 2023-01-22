@@ -526,6 +526,15 @@ pre {
   box-sizing: border-box;
 }
 
+.logbook .hexagram-list .hexagram-text .hexagram {
+  display: block;
+  margin: 2rem auto;
+  height: var(--hexagram-height);
+}
+.logbook .hexagram-list .hexagram-text .hexagram >div {
+  margin-bottom: 0.5rem;
+}
+
 .logbook .logbook-topbar {
   position: absolute;
   top: 0;

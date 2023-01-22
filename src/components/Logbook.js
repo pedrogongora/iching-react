@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import Journal from "./Journal";
 import MDHexagramText from "./MDHexagramText";
 import StateContext from "./StateContext";
+import hexagrams from '../assets/json/hexagrams.json'
+import Hexagram from "./Hexagram";
 
 const Back = ({ onClick }) => {
   const { theme } = useContext(StateContext);
@@ -26,17 +28,18 @@ const HexagramList = () => {
     e.stopPropagation();
     setShowHexagram(hexagramNumber);
   };
+  console.log(hexagrams)
 
   return (
     <div className="hexagram-list">
       {showHexagram === 0 && (
         <ul>
-          {new Array(64).fill().map((_, i) => (
-            <li key={`hex-link-${i}`}>
+          {hexagrams.map((h) => (
+            <li key={`hex-link-${h.wenNumber}`}>
               <div
                 className="hexagram-list-button"
-                onClick={itemClickHandler(i + 1)}
-              >{`Hexagrama ${i + 1}`}</div>
+                onClick={itemClickHandler(h.wenNumber)}
+              >{`${h.wenNumber}. ${h.char} ${h.name}`}</div>
             </li>
           ))}
         </ul>
@@ -45,6 +48,13 @@ const HexagramList = () => {
         <>
           <Back onClick={() => setShowHexagram(0)} />
           <div className="hexagram-text">
+            <Hexagram lines={
+                hexagrams[showHexagram - 1]
+                  .binaryString
+                  .split('')
+                  .map(c => c === '1' ? 7 : 8)
+              }
+            />
             <MDHexagramText hexagramNumber={showHexagram} />
           </div>
         </>

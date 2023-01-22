@@ -1,0 +1,578 @@
+[
+  {
+    "wenNumber": 1,
+    "name": "La Fuerza",
+    "name2": "Lo Creativo",
+    "binaryString": "111111",
+    "opposite": 1,
+    "utf": "4DC0",
+    "char": "䷀"
+  },
+  {
+    "wenNumber": 2,
+    "name": "El Campo",
+    "name2": "Lo Receptvo",
+    "binaryString": "000000",
+    "opposite": 2,
+    "utf": "4DC1",
+    "char": "䷁"
+  },
+  {
+    "wenNumber": 3,
+    "name": "Brotar",
+    "name2": "La Dificultad Inical",
+    "binaryString": "100010",
+    "opposite": 23,
+    "utf": "4DC2",
+    "char": "䷂"
+  },
+  {
+    "wenNumber": 4,
+    "name": "Embozar",
+    "name2": "La Necedad Juvenil",
+    "binaryString": "010001",
+    "opposite": 24,
+    "utf": "4DC3",
+    "char": "䷃"
+  },
+  {
+    "wenNumber": 5,
+    "name": "Aguardar",
+    "name2": "La Espera, La Alimentación",
+    "binaryString": "111010",
+    "opposite": 38,
+    "utf": "4DC4",
+    "char": "䷄"
+  },
+  {
+    "wenNumber": 6,
+    "name": "El Pleito",
+    "name2": "El Conflicto",
+    "binaryString": "010111",
+    "opposite": 37,
+    "utf": "4DC5",
+    "char": "䷅"
+  },
+  {
+    "wenNumber": 7,
+    "name": "Legiones, Liderar",
+    "name2": "El Ejército",
+    "binaryString": "010000",
+    "opposite": 24,
+    "utf": "4DC6",
+    "char": "䷆"
+  },
+  {
+    "wenNumber": 8,
+    "name": "Agrupar",
+    "name2": "La Solidaridad",
+    "binaryString": "000010",
+    "opposite": 23,
+    "utf": "4DC7",
+    "char": "䷇"
+  },
+  {
+    "wenNumber": 9,
+    "name": "Lo Pequeño Acumulando",
+    "name2": "La Fuerza Domesticadora de lo Pequño",
+    "binaryString": "111011",
+    "opposite": 38,
+    "utf": "4DC8",
+    "char": "䷈"
+  },
+  {
+    "wenNumber": 10,
+    "name": "Pisar",
+    "name2": "El Porte",
+    "binaryString": "110111",
+    "opposite": 37,
+    "utf": "4DC9",
+    "char": "䷉"
+  },
+  {
+    "wenNumber": 11,
+    "name": "Impregnar",
+    "name2": "La Paz",
+    "binaryString": "111000",
+    "opposite": 54,
+    "utf": "4DCA",
+    "char": "䷊"
+  },
+  {
+    "wenNumber": 12,
+    "name": "La Obstrucción",
+    "name2": "El Estancamieto",
+    "binaryString": "000111",
+    "opposite": 53,
+    "utf": "4DCB",
+    "char": "䷋"
+  },
+  {
+    "wenNumber": 13,
+    "name": "Concordar las Personas",
+    "name2": "La Comunidad con los Hombres",
+    "binaryString": "101111",
+    "opposite": 44,
+    "utf": "4DCC",
+    "char": "䷌"
+  },
+  {
+    "wenNumber": 14,
+    "name": "La Gran Posesión",
+    "name2": "La Posesión de lo Grande",
+    "binaryString": "111101",
+    "opposite": 43,
+    "utf": "4DCD",
+    "char": "䷍"
+  },
+  {
+    "wenNumber": 15,
+    "name": "La Modestia",
+    "name2": "La Modestia",
+    "binaryString": "001000",
+    "opposite": 40,
+    "utf": "4DCE",
+    "char": "䷎"
+  },
+  {
+    "wenNumber": 16,
+    "name": "Proveer, La Provisión",
+    "name2": "El Entusiasmo",
+    "binaryString": "000100",
+    "opposite": 39,
+    "utf": "4DCF",
+    "char": "䷏"
+  },
+  {
+    "wenNumber": 17,
+    "name": "Seguir",
+    "name2": "El Seguimiento",
+    "binaryString": "100110",
+    "opposite": 53,
+    "utf": "4DD0",
+    "char": "䷐"
+  },
+  {
+    "wenNumber": 18,
+    "name": "La Corrupción",
+    "name2": "El Trabajo en lo Echado a Perder",
+    "binaryString": "011001",
+    "opposite": 54,
+    "utf": "4DD1",
+    "char": "䷑"
+  },
+  {
+    "wenNumber": 19,
+    "name": "Acercar",
+    "name2": "El Acercamiento",
+    "binaryString": "110000",
+    "opposite": 24,
+    "utf": "4DD2",
+    "char": "䷒"
+  },
+  {
+    "wenNumber": 20,
+    "name": "Contemplar",
+    "name2": "La Contemplación, La Visión",
+    "binaryString": "000011",
+    "opposite": 23,
+    "utf": "4DD3",
+    "char": "䷓"
+  },
+  {
+    "wenNumber": 21,
+    "name": "La Tajante Mordedura",
+    "name2": "La Mordedura tajante",
+    "binaryString": "100101",
+    "opposite": 39,
+    "utf": "4DD4",
+    "char": "䷔"
+  },
+  {
+    "wenNumber": 22,
+    "name": "Adornar",
+    "name2": "La Gracia",
+    "binaryString": "101001",
+    "opposite": 40,
+    "utf": "4DD5",
+    "char": "䷕"
+  },
+  {
+    "wenNumber": 23,
+    "name": "Despojar",
+    "name2": "La Desintegración",
+    "binaryString": "000001",
+    "opposite": 2,
+    "utf": "4DD6",
+    "char": "䷖"
+  },
+  {
+    "wenNumber": 24,
+    "name": "Retornar",
+    "name2": "El Retorno",
+    "binaryString": "100000",
+    "opposite": 2,
+    "utf": "4DD7",
+    "char": "䷗"
+  },
+  {
+    "wenNumber": 25,
+    "name": "Sin Enredar",
+    "name2": "La Inocencia, Lo Inesperado",
+    "binaryString": "100111",
+    "opposite": 53,
+    "utf": "4DD8",
+    "char": "䷘"
+  },
+  {
+    "wenNumber": 26,
+    "name": "Lo Grande Acumulando",
+    "name2": "La Fuerza Domesticadora de lo Grande",
+    "binaryString": "111001",
+    "opposite": 54,
+    "utf": "4DD9",
+    "char": "䷙"
+  },
+  {
+    "wenNumber": 27,
+    "name": "Las Fauces/Tragar",
+    "name2": "Las Comisuras de la Boca, La Alimentación",
+    "binaryString": "100001",
+    "opposite": 2,
+    "utf": "4DDA",
+    "char": "䷚"
+  },
+  {
+    "wenNumber": 28,
+    "name": "El Gran Exceso",
+    "name2": "La Preponderancia de lo Grande",
+    "binaryString": "011110",
+    "opposite": 1,
+    "utf": "4DDB",
+    "char": "䷛"
+  },
+  {
+    "wenNumber": 29,
+    "name": "El Barranco",
+    "name2": "Lo Abismal, El Agua",
+    "binaryString": "010010",
+    "opposite": 27,
+    "utf": "4DDC",
+    "char": "䷜"
+  },
+  {
+    "wenNumber": 30,
+    "name": "El Fulgor",
+    "name2": "Lo Adherente, El Fuego",
+    "binaryString": "101101",
+    "opposite": 28,
+    "utf": "4DDD",
+    "char": "䷝"
+  },
+  {
+    "wenNumber": 31,
+    "name": "Conjuntar",
+    "name2": "El Influjo, El Cortejo",
+    "binaryString": "001110",
+    "opposite": 44,
+    "utf": "4DDE",
+    "char": "䷞"
+  },
+  {
+    "wenNumber": 32,
+    "name": "Perseverar",
+    "name2": "La Duración",
+    "binaryString": "011100",
+    "opposite": 43,
+    "utf": "4DDF",
+    "char": "䷟"
+  },
+  {
+    "wenNumber": 33,
+    "name": "La Retirada",
+    "name2": "La Retirada",
+    "binaryString": "001111",
+    "opposite": 44,
+    "utf": "4DE0",
+    "char": "䷠"
+  },
+  {
+    "wenNumber": 34,
+    "name": "El Gran Vigor",
+    "name2": "El Poder de lo Grande",
+    "binaryString": "111100",
+    "opposite": 43,
+    "utf": "4DE1",
+    "char": "䷡"
+  },
+  {
+    "wenNumber": 35,
+    "name": "Prosperar",
+    "name2": "El Progreso",
+    "binaryString": "000101",
+    "opposite": 39,
+    "utf": "4DE2",
+    "char": "䷢"
+  },
+  {
+    "wenNumber": 36,
+    "name": "El Esplendor Oculto",
+    "name2": "El Oscurecimiento de la Luz",
+    "binaryString": "101000",
+    "opposite": 40,
+    "utf": "4DE3",
+    "char": "䷣"
+  },
+  {
+    "wenNumber": 37,
+    "name": "Morar Personas",
+    "name2": "El Clan",
+    "binaryString": "101011",
+    "opposite": 64,
+    "utf": "4DE4",
+    "char": "䷤"
+  },
+  {
+    "wenNumber": 38,
+    "name": "Polarizar",
+    "name2": "El Antagonismo",
+    "binaryString": "110101",
+    "opposite": 63,
+    "utf": "4DE5",
+    "char": "䷥"
+  },
+  {
+    "wenNumber": 39,
+    "name": "Cojear",
+    "name2": "El Impedimento",
+    "binaryString": "001010",
+    "opposite": 64,
+    "utf": "4DE6",
+    "char": "䷦"
+  },
+  {
+    "wenNumber": 40,
+    "name": "La Desintegración",
+    "name2": "La Liberación",
+    "binaryString": "010100",
+    "opposite": 63,
+    "utf": "4DE7",
+    "char": "䷧"
+  },
+  {
+    "wenNumber": 41,
+    "name": "La Disminución",
+    "name2": "La Merma",
+    "binaryString": "110001",
+    "opposite": 24,
+    "utf": "4DE8",
+    "char": "䷨"
+  },
+  {
+    "wenNumber": 42,
+    "name": "El Aumento",
+    "name2": "El Aumento",
+    "binaryString": "100011",
+    "opposite": 23,
+    "utf": "4DE9",
+    "char": "䷩"
+  },
+  {
+    "wenNumber": 43,
+    "name": "Divergir",
+    "name2": "El Desbordamiento, La Irrupción, La Resolución",
+    "binaryString": "111110",
+    "opposite": 1,
+    "utf": "4DEA",
+    "char": "䷪"
+  },
+  {
+    "wenNumber": 44,
+    "name": "El Acoplamiento",
+    "name2": "El Ir al Encuentro, La Intransigencia",
+    "binaryString": "011111",
+    "opposite": 1,
+    "utf": "4DEB",
+    "char": "䷫"
+  },
+  {
+    "wenNumber": 45,
+    "name": "Apiñar",
+    "name2": "La Reunión, La Recolección",
+    "binaryString": "000110",
+    "opposite": 53,
+    "utf": "4DEC",
+    "char": "䷬"
+  },
+  {
+    "wenNumber": 46,
+    "name": "Ascender",
+    "name2": "La Subida, Penetrar Hacia lo Alto",
+    "binaryString": "011000",
+    "opposite": 54,
+    "utf": "4DED",
+    "char": "䷭"
+  },
+  {
+    "wenNumber": 47,
+    "name": "Confinar",
+    "name2": "La Desazón, La Opresión",
+    "binaryString": "010110",
+    "opposite": 37,
+    "utf": "4DEE",
+    "char": "䷮"
+  },
+  {
+    "wenNumber": 48,
+    "name": "El Pozo, Manar",
+    "name2": "El Pozo de Agua",
+    "binaryString": "011010",
+    "opposite": 38,
+    "utf": "4DEF",
+    "char": "䷯"
+  },
+  {
+    "wenNumber": 49,
+    "name": "Desollar",
+    "name2": "La Revolución, La Muda",
+    "binaryString": "101110",
+    "opposite": 44,
+    "utf": "4DF0",
+    "char": "䷰"
+  },
+  {
+    "wenNumber": 50,
+    "name": "La Vasija, Contener",
+    "name2": "El Caldero",
+    "binaryString": "011101",
+    "opposite": 43,
+    "utf": "4DF1",
+    "char": "䷱"
+  },
+  {
+    "wenNumber": 51,
+    "name": "La Conmoción",
+    "name2": "Lo Suscitativo, La Conmoción",
+    "binaryString": "100100",
+    "opposite": 39,
+    "utf": "4DF2",
+    "char": "䷲"
+  },
+  {
+    "wenNumber": 52,
+    "name": "La Restricción",
+    "name2": "El Aquietamiento, La Montaña",
+    "binaryString": "001001",
+    "opposite": 40,
+    "utf": "4DF3",
+    "char": "䷳"
+  },
+  {
+    "wenNumber": 53,
+    "name": "La Infiltración",
+    "name2": "La Evolución, Progreso Paulatino",
+    "binaryString": "001011",
+    "opposite": 64,
+    "utf": "4DF4",
+    "char": "䷴"
+  },
+  {
+    "wenNumber": 54,
+    "name": "Convertir la Doncellez",
+    "name2": "La Muchacha que se Casa",
+    "binaryString": "110100",
+    "opposite": 63,
+    "utf": "4DF5",
+    "char": "䷵"
+  },
+  {
+    "wenNumber": 55,
+    "name": "La Abundancia",
+    "name2": "La Plenitud",
+    "binaryString": "101100",
+    "opposite": 28,
+    "utf": "4DF6",
+    "char": "䷶"
+  },
+  {
+    "wenNumber": 56,
+    "name": "Transitar",
+    "name2": "El Andariego",
+    "binaryString": "001101",
+    "opposite": 28,
+    "utf": "4DF7",
+    "char": "䷷"
+  },
+  {
+    "wenNumber": 57,
+    "name": "El Suelo",
+    "name2": "Lo Suave, Lo Penetrante, El Viento",
+    "binaryString": "011011",
+    "opposite": 38,
+    "utf": "4DF8",
+    "char": "䷸"
+  },
+  {
+    "wenNumber": 58,
+    "name": "Lo Abierto",
+    "name2": "Lo Sereno, El lago",
+    "binaryString": "110110",
+    "opposite": 37,
+    "utf": "4DF9",
+    "char": "䷹"
+  },
+  {
+    "wenNumber": 59,
+    "name": "Dispersar",
+    "name2": "La Disolución",
+    "binaryString": "010011",
+    "opposite": 27,
+    "utf": "4DFA",
+    "char": "䷺"
+  },
+  {
+    "wenNumber": 60,
+    "name": "La Articulación",
+    "name2": "La Restricción",
+    "binaryString": "110010",
+    "opposite": 27,
+    "utf": "4DFB",
+    "char": "䷻"
+  },
+  {
+    "wenNumber": 61,
+    "name": "Centrar la Conformidad",
+    "name2": "La Verdad Interior",
+    "binaryString": "110011",
+    "opposite": 27,
+    "utf": "4DFC",
+    "char": "䷼"
+  },
+  {
+    "wenNumber": 62,
+    "name": "El Pequeño Exceso",
+    "name2": "La Preponderancia de lo Pequño",
+    "binaryString": "001100",
+    "opposite": 28,
+    "utf": "4DFD",
+    "char": "䷽"
+  },
+  {
+    "wenNumber": 63,
+    "name": "Ya Cruzar",
+    "name2": "Después de la Consumación",
+    "binaryString": "101010",
+    "opposite": 64,
+    "utf": "4DFE",
+    "char": "䷾"
+  },
+  {
+    "wenNumber": 64,
+    "name": "Aún-no Cruzar",
+    "name2": "Antes de la Consumación",
+    "binaryString": "010101",
+    "opposite": 63,
+    "utf": "4DFF",
+    "char": "䷿"
+  }
+]
