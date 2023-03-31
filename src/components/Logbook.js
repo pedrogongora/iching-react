@@ -53,6 +53,7 @@ const HexagramList = () => {
                   .binaryString
                   .split('')
                   .map(c => c === '1' ? 7 : 8)
+                  .reverse()
               }
             />
             <MDHexagramText hexagramNumber={showHexagram} />
