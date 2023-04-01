@@ -531,7 +531,7 @@ pre {
   margin: 2rem auto;
   height: var(--hexagram-height);
 }
-.logbook .hexagram-list .hexagram-text .hexagram >div {
+.logbook .hexagram-list .hexagram-text .hexagram > div {
   margin-bottom: 0.5rem;
 }
 
@@ -626,6 +626,48 @@ pre {
 
 .journal .entry-data > div {
   padding: 1rem 0;
+}
+
+.journal .entry-data .entry-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.journal .entry-data > div > button {
+  padding: 0.3rem 1rem;
+  border: none;
+  font-family: var(--font);
+  font-size: 1rem;
+  border-width: 2pt;
+  border-style: solid;
+  user-select: none;
+}
+.journal .entry-data > div > button:hover {
+  cursor: pointer;
+}
+.journal .entry-data > div > button.light {
+  color: var(--light-foreground);
+  background-color: var(--light-background);
+  border-color: var(--light-foreground);
+}
+.journal .entry-data > div > button.light:active {
+  color: var(--light-background);
+  background-color: var(--light-foreground);
+  border-color: var(--light-foreground);
+}
+.journal .entry-data > div > button.dark {
+  color: var(--dark-foreground);
+  background-color: var(--dark-background);
+  border-color: var(--dark-foreground);
+}
+.journal .entry-data > div > button.dark:active {
+  color: var(--dark-background);
+  background-color: var(--dark-foreground);
+  border-color: var(--dark-foreground);
+}
+.journal .entry-data > div > button:focus {
+  outline: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .journal .result {
