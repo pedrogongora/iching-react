@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
-import { animated, useSpring } from "react-spring";
-import { mutate, number } from "../hexagrams";
-import Hexagram from "./Hexagram";
-import MDHexagramText from "./MDHexagramText";
-import StateContext from "./StateContext";
+import React from 'react'
+import { animated, useSpring } from 'react-spring'
+import { mutate, number } from '../hexagrams'
+import Hexagram from './Hexagram'
+import MDHexagramText from './MDHexagramText'
 
 /* const Title = ({ number }) => <h3>{`${number}. ${name(number)}`}</h3>;
 
@@ -48,11 +47,11 @@ const ResultPanel = ({ hexagram }) => {
     opacity: 1,
     from: { opacity: 0 },
     config: { tension: 300 },
-  });
+  })
 
-  const hexagram2 = mutate(hexagram);
-  const hexNum1 = number(hexagram);
-  const hexNum2 = number(hexagram2);
+  const hexagram2 = mutate(hexagram)
+  const hexNum1 = number(hexagram)
+  const hexNum2 = number(hexagram2)
 
   return (
     <animated.div className="result" style={animProps}>
@@ -69,7 +68,7 @@ const ResultPanel = ({ hexagram }) => {
         </>
       )}
     </animated.div>
-  );
-};
+  )
+}
 
-export default ResultPanel;
+export default ResultPanel
