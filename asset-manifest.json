@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/iching-react/static/css/main.22b7b8d3.chunk.css",
-    "main.js": "/iching-react/static/js/main.e39e9e90.chunk.js",
-    "main.js.map": "/iching-react/static/js/main.e39e9e90.chunk.js.map",
+    "main.css": "/iching-react/static/css/main.59972e17.chunk.css",
+    "main.js": "/iching-react/static/js/main.1461d242.chunk.js",
+    "main.js.map": "/iching-react/static/js/main.1461d242.chunk.js.map",
     "runtime-main.js": "/iching-react/static/js/runtime-main.6d27b465.js",
     "runtime-main.js.map": "/iching-react/static/js/runtime-main.6d27b465.js.map",
     "static/js/2.a9e2258e.chunk.js": "/iching-react/static/js/2.a9e2258e.chunk.js",
     "static/js/2.a9e2258e.chunk.js.map": "/iching-react/static/js/2.a9e2258e.chunk.js.map",
     "index.html": "/iching-react/index.html",
-    "static/css/main.22b7b8d3.chunk.css.map": "/iching-react/static/css/main.22b7b8d3.chunk.css.map",
+    "static/css/main.59972e17.chunk.css.map": "/iching-react/static/css/main.59972e17.chunk.css.map",
     "static/js/2.a9e2258e.chunk.js.LICENSE.txt": "/iching-react/static/js/2.a9e2258e.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/iching-react/static/media/Cantarell-Regular.5761b764.ttf",
     "static/media/Hexagrama1.3a996ab3.md": "/iching-react/static/media/Hexagrama1.3a996ab3.md",
@@ -79,7 +79,7 @@
   "entrypoints": [
     "static/js/runtime-main.6d27b465.js",
     "static/js/2.a9e2258e.chunk.js",
-    "static/css/main.22b7b8d3.chunk.css",
-    "static/js/main.e39e9e90.chunk.js"
+    "static/css/main.59972e17.chunk.css",
+    "static/js/main.1461d242.chunk.js"
   ]
 }
