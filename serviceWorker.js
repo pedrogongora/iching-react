@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 let CACHE_NAME = "my-site-cache-v1";
 
-const urlsToCache = ["/iching-react/index.html"];
+const urlsToCache = [];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
