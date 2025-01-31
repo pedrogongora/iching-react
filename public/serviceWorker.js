@@ -1,26 +1,44 @@
 /* eslint-disable no-restricted-globals */
-let CACHE_NAME = "my-site-cache-v1";
 
-const urlsToCache = [];
+const CACHE_NAME = 'arca-de-noesis-cache-v1' // Nombre del cache
 
-self.addEventListener("install", function (event) {
-  // Perform install steps
+// Instalación del Service Worker
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      console.log("Opened cache");
-      return cache.addAll(urlsToCache);
-    })
-  );
-  self.skipWaiting();
-});
+    fetch('/arca-de-noesis/asset-manifest.json') // Lee el archivo asset-manifest.json
+      .then(response => response.json())
+      .then(assets => {
+        const urlsToCache = ['/', ...Object.values(assets['files'])]
+        console.log('urls to cache', urlsToCache)
+        return caches.open(CACHE_NAME).then(cache => {
+          return cache.addAll(urlsToCache) // Cachea los recursos
+        })
+      })
+      .catch(console.error)
+  )
+})
 
-self.addEventListener("fetch", function (event) {
+// Intercepta las solicitudes y sirve desde el cache
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      /* if (response) {
-        return response;
-      } */
-      return fetch(event.request);
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request) // Sirve desde el cache o hace la solicitud
     })
-  );
-});
+  )
+})
+
+// Limpia caches antiguos
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName) // Elimina caches antiguos
+          }
+          return null
+        })
+      )
+    })
+  )
+})
