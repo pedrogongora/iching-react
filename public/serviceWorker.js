@@ -1,11 +1,11 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_NAME = 'arca-de-noesis-cache-v1' // Nombre del cache
+const CACHE_NAME = 'iching-react-cache-v1' // Nombre del cache
 
 // Instalación del Service Worker
 self.addEventListener('install', event => {
   event.waitUntil(
-    fetch('/arca-de-noesis/asset-manifest.json') // Lee el archivo asset-manifest.json
+    fetch('/iching-react/asset-manifest.json') // Lee el archivo asset-manifest.json
       .then(response => response.json())
       .then(assets => {
         const urlsToCache = ['/', ...Object.values(assets['files'])]
