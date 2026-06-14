@@ -10,7 +10,14 @@ const DarkmodeSwitch = ({ changeTheme }) => {
     theme === 'dark' ? changeTheme('light') : changeTheme('dark')
 
   return (
-    <div className={`darkmode-switch ${theme}`} onClick={clickHandle}>
+    <div
+      className={`darkmode-switch ${theme}`}
+      onClick={clickHandle}
+      role="button"
+      aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
+      tabIndex={0}
+      onKeyDown={e => e.key === 'Enter' && clickHandle()}
+    >
       {theme === 'light' ? <Moon /> : <Sun />}
     </div>
   )

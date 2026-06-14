@@ -12,6 +12,10 @@ const BackButton = ({ onBack }) => {
       className={`back-button ${theme}`}
       style={animProps}
       onClick={onBack}
+      role="button"
+      aria-label="Volver"
+      tabIndex={0}
+      onKeyDown={e => e.key === 'Enter' && onBack()}
     >
       <svg viewBox="0 0 512 512">
         <path

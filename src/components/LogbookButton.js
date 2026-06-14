@@ -15,7 +15,14 @@ const Icon = () => (
 const LogbookButton = ({ onClick }) => {
   const { theme } = useContext(StateContext);
   return (
-    <div className={`logbook-button ${theme}`} onClick={onClick}>
+    <div
+      className={`logbook-button ${theme}`}
+      onClick={onClick}
+      role="button"
+      aria-label="Abrir bitácora"
+      tabIndex={0}
+      onKeyDown={e => e.key === 'Enter' && onClick()}
+    >
       <Icon />
     </div>
   );

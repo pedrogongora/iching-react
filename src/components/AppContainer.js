@@ -12,7 +12,9 @@ import { findEntry, loadJournal, saveEntry } from "../util/journal";
 
 const rng = new seedrandom();
 
-const defaultTheme = window.localStorage.getItem("theme") ?? "light";
+const defaultTheme =
+  window.localStorage.getItem("theme") ??
+  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 const AppContainer = () => {
   // theme: 'light' | 'dark'

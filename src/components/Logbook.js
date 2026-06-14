@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Journal from "./Journal";
 import MDHexagramText from "./MDHexagramText";
 import StateContext from "./StateContext";
@@ -28,8 +28,6 @@ const HexagramList = () => {
     e.stopPropagation();
     setShowHexagram(hexagramNumber);
   };
-  console.log(hexagrams)
-
   return (
     <div className="hexagram-list">
       {showHexagram === 0 && (
@@ -68,9 +66,17 @@ const Logbook = ({ onClose }) => {
   const { theme } = useContext(StateContext);
   const [tab, setTab] = useState("hexagrams-tab");
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [onClose])
+
   return (
-    <div className="logbook">
-      <div className={`logbook-window ${theme}`}>
+    <div className="logbook" onClick={onClose}>
+      <div className={`logbook-window ${theme}`} onClick={e => e.stopPropagation()}>
         <div className="logbook-contents">
           {tab === "hexagrams-tab" && <HexagramList />}
           {tab === "journal-tab" && <Journal />}

@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { deleteEntry, loadJournal, updateEntry } from '../util/journal'
+import { number } from '../hexagrams'
+import hexagramsData from '../assets/json/hexagrams.json'
 import ResultPanel from './ResultPanel'
 import StateContext from './StateContext'
 
@@ -55,10 +57,18 @@ const Back = ({ onClick }) => {
 }
 
 const Entry = ({ entry }) => {
+  const hexNum = number(entry.hexagram)
+  const hexInfo = hexagramsData[hexNum - 1]
   return (
     <div className="journal-entry">
-      Consulta del
-      {formatTimestamp(entry.sessionTimestamp)}
+      {hexInfo && (
+        <span className="journal-entry-name">
+          {hexNum}. {hexInfo.char} {hexInfo.name}
+        </span>
+      )}
+      <span className="journal-entry-date">
+        Consulta del{formatTimestamp(entry.sessionTimestamp)}
+      </span>
     </div>
   )
 }

@@ -23,7 +23,12 @@ const StartButton = ({ onStart }) => {
         className={`start-button ${theme} ${visible} ${start}`}
         onClick={clickHandler}
       >
-        {hexagram.length === 6 ? 'Ver resultado' : 'Tirar monedas'}
+        <span className="button-label">
+          {hexagram.length === 6 ? 'Ver resultado' : 'Tirar monedas'}
+        </span>
+        {step === 'coinshuffle' && (
+          <span className="toss-progress">{hexagram.length} de 6</span>
+        )}
       </button>
     </animated.div>
   )
