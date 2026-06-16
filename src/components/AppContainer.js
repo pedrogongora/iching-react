@@ -1,106 +1,97 @@
-import React, { useEffect, useState } from "react";
-import seedrandom from "seedrandom";
-import StateContext from "./StateContext";
-import CoinShuffle from "./CoinShuffle";
-import ResultPanel from "./ResultPanel";
-import StartButton from "./StartButton";
-import DarkmodeSwitch from "./DarkmodeSwitch";
-import BackButton from "./BackButton";
-import LogbookButton from "./LogbookButton";
-import Logbook from "./Logbook";
-import { findEntry, loadJournal, saveEntry } from "../util/journal";
+import React, { useEffect, useState } from 'react'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import seedrandom from 'seedrandom'
+import StateContext from './StateContext'
+import DarkmodeSwitch from './DarkmodeSwitch'
+import BackButton from './BackButton'
+import LogbookButton from './LogbookButton'
+import HexagramListButton from './HexagramListButton'
+import NuevaTiradaButton from './NuevaTiradaButton'
+import { findEntry, loadJournal, saveEntry } from '../util/journal'
 
-const rng = new seedrandom();
+const rng = new seedrandom()
 
 const defaultTheme =
-  window.localStorage.getItem("theme") ??
-  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  window.localStorage.getItem('theme') ??
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 
 const AppContainer = () => {
-  // theme: 'light' | 'dark'
-  const [theme, setTheme] = useState(defaultTheme);
-  // step: 'start' | 'coinshuffle' | 'result'
-  const [step, setStep] = useState("start");
-  // hexagram: [number]
-  const [hexagram, setHexagram] = useState([]);
-  // coinResult: [number]
-  const [coinResult, setCoinResult] = useState([]);
-  // showLogbook: boolean
-  const [showLogbook, setShowLogbook] = useState(false);
-  const [sessionTimestamp, setSessionTimestamp] = useState(undefined);
+  const [theme, setTheme] = useState(defaultTheme)
+  const [hexagram, setHexagram] = useState([])
+  const [coinResult, setCoinResult] = useState([])
+  const [sessionTimestamp, setSessionTimestamp] = useState(undefined)
 
-  // save session to journal
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  // reset state when returning to home
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setHexagram([])
+      setCoinResult([])
+      setSessionTimestamp(undefined)
+    }
+  }, [location.pathname])
+
+  // save session to journal when hexagram is complete
   useEffect(() => {
     if (hexagram.length === 6) {
-      const timestamp = new Date().toISOString();
-      setSessionTimestamp(timestamp);
-      const journal = loadJournal();
-      const prevEntry = findEntry(timestamp, journal);
+      const timestamp = new Date().toISOString()
+      setSessionTimestamp(timestamp)
+      const journal = loadJournal()
+      const prevEntry = findEntry(timestamp, journal)
       if (!prevEntry) {
         saveEntry({
           sessionTimestamp: timestamp,
           hexagram,
-          comments: "",
-        });
+          comments: '',
+        })
       }
     }
-  }, [hexagram]);
+  }, [hexagram])
 
-  // start/toss coins button callback
   const onStart = () => {
     if (hexagram.length === 6) {
-      setStep("result");
-      return;
+      navigate('/resultado')
+      return
     }
+    const res = [1, 2, 3].map(() => Math.abs(rng.int32() % 2))
+    const line = res.map(v => (v === 0 ? 2 : 3)).reduce((a, v) => a + v)
+    setCoinResult(res)
+    setHexagram([line].concat(hexagram))
+    navigate('/tirada', { replace: location.pathname === '/tirada' })
+  }
 
-    const res = [1, 2, 3].map(() => Math.abs(rng.int32() % 2));
-    const line = res.map((v) => (v === 0 ? 2 : 3)).reduce((a, v) => a + v);
-    const updatedHexagram = [line].concat(hexagram);
+  const resetHexagram = () => {
+    setHexagram([])
+    setCoinResult([])
+    setSessionTimestamp(undefined)
+    navigate('/')
+  }
 
-    setStep("coinshuffle");
-    setCoinResult(res);
-    setHexagram(updatedHexagram);
-  };
-
-  // back button callback
-  const onBack = () => {
-    if (step === "coinshuffle") {
-      setStep("start");
-      setHexagram([]);
-    }
-
-    if (step === "result") {
-      setStep("coinshuffle");
-    }
-  };
-
-  // change theme button callback
-  const changeTheme = (t) => {
-    setTheme(t);
-    window.localStorage.setItem("theme", t);
-  };
+  const changeTheme = t => {
+    setTheme(t)
+    window.localStorage.setItem('theme', t)
+  }
 
   return (
     <StateContext.Provider
-      value={{ theme, step, hexagram, coinResult, sessionTimestamp }}
+      value={{ theme, hexagram, coinResult, sessionTimestamp, onStart, resetHexagram }}
     >
       <div className={`app-container ${theme}`}>
         <div className="vertical-scroll">
           <div className="contents">
-            {(step === "start" || step === "coinshuffle") && (
-              <StartButton onStart={onStart} />
-            )}
-            {step === "coinshuffle" && <CoinShuffle />}
-            {step === "result" && <ResultPanel hexagram={hexagram} />}
+            <Outlet />
           </div>
         </div>
-        {step !== "start" && <BackButton onBack={onBack} />}
-        {showLogbook && <Logbook onClose={() => setShowLogbook(false)} />}
-        <LogbookButton onClick={() => setShowLogbook((s) => !s)} />
+        {location.pathname !== '/' && <BackButton />}
+        <NuevaTiradaButton />
+        <HexagramListButton />
+        <LogbookButton />
         <DarkmodeSwitch changeTheme={changeTheme} />
       </div>
     </StateContext.Provider>
-  );
-};
+  )
+}
 
-export default AppContainer;
+export default AppContainer

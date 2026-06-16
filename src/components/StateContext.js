@@ -2,8 +2,11 @@ import React from 'react'
 
 const StateContext = React.createContext({
   theme: 'light',
-  step: 'start',
   hexagram: [],
+  coinResult: [],
+  sessionTimestamp: undefined,
+  onStart: () => {},
+  resetHexagram: () => {},
 })
 
 export default StateContext

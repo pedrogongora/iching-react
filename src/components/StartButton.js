@@ -1,32 +1,26 @@
 import React, { useContext } from 'react'
 import { animated, useSpring } from 'react-spring'
+import { useLocation } from 'react-router-dom'
 import StateContext from './StateContext'
 
 const StartButton = ({ onStart }) => {
-  const { theme, step, hexagram } = useContext(StateContext)
+  const { theme, hexagram } = useContext(StateContext)
+  const location = useLocation()
 
-  // animate mount at start or back
   const animProps = useSpring({ opacity: 1, from: { opacity: 0 } })
 
-  // visible flag
-  const visible =
-    step === 'start' || step === 'coinshuffle' ? 'visible' : 'hidden'
-
-  // first time?
-  const start = step === 'start' ? 'start' : ''
-
-  const clickHandler = onStart
+  const isHome = location.pathname === '/'
 
   return (
     <animated.div style={animProps}>
       <button
-        className={`start-button ${theme} ${visible} ${start}`}
-        onClick={clickHandler}
+        className={`start-button ${theme} visible ${isHome ? 'start' : ''}`}
+        onClick={onStart}
       >
         <span className="button-label">
           {hexagram.length === 6 ? 'Ver resultado' : 'Tirar monedas'}
         </span>
-        {step === 'coinshuffle' && (
+        {!isHome && (
           <span className="toss-progress">{hexagram.length} de 6</span>
         )}
       </button>

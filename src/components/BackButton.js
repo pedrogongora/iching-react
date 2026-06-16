@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { animated, useSpring } from 'react-spring'
+import { useNavigate } from 'react-router-dom'
 import StateContext from './StateContext'
 
-const BackButton = ({ onBack }) => {
+const BackButton = () => {
   const { theme } = useContext(StateContext)
+  const navigate = useNavigate()
 
   const animProps = useSpring({ opacity: 1, from: { opacity: 0 } })
 
@@ -11,11 +13,11 @@ const BackButton = ({ onBack }) => {
     <animated.div
       className={`back-button ${theme}`}
       style={animProps}
-      onClick={onBack}
+      onClick={() => navigate(-1)}
       role="button"
       aria-label="Volver"
       tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && onBack()}
+      onKeyDown={e => e.key === 'Enter' && navigate(-1)}
     >
       <svg viewBox="0 0 512 512">
         <path

@@ -72,9 +72,6 @@ body {
   display: block;
 }
 
-.start-button.hidden {
-  display: none;
-}
 
 .start-button {
   position: absolute;
@@ -311,14 +308,16 @@ body {
 }
 
 .result {
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100vw; */
-  /* height: 100vh; */
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
-  /* overflow: auto; */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .result {
+    padding: 2rem 3rem;
+  }
 }
 .result::-webkit-scrollbar {
   -webkit-appearance: scrollbartrack-vertical;
@@ -430,100 +429,67 @@ pre {
   fill: var(--dark-foreground);
 }
 
-@keyframes logbook-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes logbook-slide-in {
-  from { opacity: 0; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.logbook {
+.nueva-tirada-button {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  animation: logbook-fade-in 0.15s ease;
-}
-
-.logbook .logbook-window {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  animation: logbook-slide-in 0.2s ease;
-}
-
-.logbook .logbook-window.dark {
-  background-color: var(--dark-background);
-}
-.logbook .logbook-window.light {
-  background-color: var(--light-background);
-}
-
-.logbook .logbook-close-button {
-  position: absolute;
   top: 0.5rem;
-  right: 1rem;
-  background-color: transparent;
-  border: none;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  user-select: none;
+  left: 3rem;
+  padding: 0.5rem;
+  width: 1.3rem;
+  box-sizing: content-box;
 }
 
-.logbook .logbook-close-button:hover {
+.nueva-tirada-button:hover {
   cursor: pointer;
 }
 
-.logbook .logbook-close-button.dark {
-  color: var(--dark-foreground);
-}
-.logbook .logbook-close-button.light {
-  color: var(--light-foreground);
+.nueva-tirada-button.light {
+  fill: var(--light-foreground);
 }
 
-.logbook .logbook-contents {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
+.nueva-tirada-button.dark {
+  fill: var(--dark-foreground);
+}
+
+.hexagramas-nav-button {
+  position: fixed;
+  top: 0.5rem;
+  right: 5.5rem;
+  padding: 0.5rem;
+  width: 1.3rem;
+  box-sizing: content-box;
+}
+
+.hexagramas-nav-button:hover {
+  cursor: pointer;
+}
+
+.hexagramas-nav-button.light {
+  fill: var(--light-foreground);
+}
+
+.hexagramas-nav-button.dark {
+  fill: var(--dark-foreground);
+}
+
+.hexagram-list-screen {
+  padding: 3.5rem 1.5rem 2rem;
+  min-height: 100vh;
   box-sizing: border-box;
-  overflow-y: auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.logbook .hexagram-list {
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.logbook .hexagram-list ul {
+.hexagram-list-screen ul {
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding: 0;
 }
 
-.logbook .hexagram-list li {
-  padding: 0.7rem 0;
+.hexagram-list-screen li {
+  padding: 0.6rem 0;
 }
 
-.logbook-window.light .hexagram-list li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-.logbook-window.dark .hexagram-list li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.logbook .hexagram-list-button {
+.hexagram-list-screen .hexagram-list-button {
   display: block;
   border: 0;
   background-color: transparent;
@@ -531,92 +497,47 @@ pre {
   font-family: inherit;
   font-size: 1rem;
 }
-.logbook .hexagram-list-button:hover {
+
+.hexagram-list-screen .hexagram-list-button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.logbook .hexagram-list .log-back-button {
-  position: absolute;
-  top: 0.23rem;
-  left: 0.5rem;
-  width: 1.3rem;
-  border: none;
-}
-.logbook .hexagram-list .log-back-button:hover {
-  cursor: pointer;
-}
-.logbook .hexagram-list .log-back-button.light {
-  stroke: var(--light-foreground);
-  fill: var(--light-foreground);
-}
-.logbook .hexagram-list .log-back-button.dark {
-  stroke: var(--dark-foreground);
-  fill: var(--dark-foreground);
+.hexagram-list-screen.light li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.logbook .hexagram-list .hexagram-text {
-  height: 100%;
-  padding: 2.5rem 0;
-  overflow-y: auto;
+.hexagram-list-screen.dark li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hexagram-detail-screen {
+  padding: 3.5rem 1.5rem 2rem;
+  min-height: 100vh;
   box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.logbook .hexagram-list .hexagram-text .hexagram {
+.hexagram-detail-screen .hexagram {
   display: block;
   margin: 2rem auto;
   height: var(--hexagram-height);
 }
-.logbook .hexagram-list .hexagram-text .hexagram > div {
+
+.hexagram-detail-screen .hexagram > div {
   margin-bottom: 0.5rem;
 }
 
-.logbook .logbook-topbar {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logbook-topbar ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-.logbook-topbar li {
-  width: 8rem;
-  color: inherit;
-  background-color: transparent;
-}
-
-.logbook-topbar li div {
-  padding: 1rem 0.2rem;
-  text-align: center;
-}
-.logbook-topbar.dark li div:hover {
-  cursor: pointer;
-  border-bottom: 1pt solid var(--dark-foreground);
-}
-.logbook-topbar.light li div:hover {
-  cursor: pointer;
-  border-bottom: 1pt solid var(--light-foreground);
-}
-.logbook-topbar.dark li div.selected {
-  border-bottom: 1pt solid var(--dark-foreground);
-}
-.logbook-topbar.light li div.selected {
-  border-bottom: 1pt solid var(--light-foreground);
-}
-
 .journal {
-  height: 100%;
+  min-height: 100vh;
+  padding: 3.5rem 1.5rem 2rem;
   box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .journal ul {
-  padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
@@ -653,31 +574,10 @@ pre {
 
 .journal .journal-contents {
   position: relative;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.journal .journal-back-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 1.3rem;
-  border: none;
-}
-.journal .journal-back-button:hover {
-  cursor: pointer;
-}
-.journal .journal-back-button.light {
-  stroke: var(--light-foreground);
-  fill: var(--light-foreground);
-}
-.journal .journal-back-button.dark {
-  stroke: var(--dark-foreground);
-  fill: var(--dark-foreground);
 }
 
 .journal .entry-data {
-  padding: 3rem 2rem;
+  padding: 2rem 0;
 }
 
 .journal .entry-data > div {
@@ -727,5 +627,5 @@ pre {
 }
 
 .journal .result {
-  padding: 2rem 0rem;
+  padding: 2rem 0;
 }

@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import StateContext from "./StateContext";
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import StateContext from './StateContext'
 
 const Icon = () => (
   <svg viewBox="0 0 512 512">
@@ -10,22 +11,23 @@ const Icon = () => (
       />
     </g>
   </svg>
-);
+)
 
-const LogbookButton = ({ onClick }) => {
-  const { theme } = useContext(StateContext);
+const LogbookButton = () => {
+  const { theme } = useContext(StateContext)
+  const navigate = useNavigate()
   return (
     <div
       className={`logbook-button ${theme}`}
-      onClick={onClick}
+      onClick={() => navigate('/bitacora')}
       role="button"
       aria-label="Abrir bitácora"
       tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && onClick()}
+      onKeyDown={e => e.key === 'Enter' && navigate('/bitacora')}
     >
       <Icon />
     </div>
-  );
-};
+  )
+}
 
-export default LogbookButton;
+export default LogbookButton
