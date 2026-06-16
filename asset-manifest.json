@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/iching-react/static/css/main.3b6c5d5a.css",
-    "main.js": "/iching-react/static/js/main.5076c7be.js",
+    "main.css": "/iching-react/static/css/main.fdc63853.css",
+    "main.js": "/iching-react/static/js/main.7cc46a91.js",
     "static/media/Cantarell-BoldItalic.ttf": "/iching-react/static/media/Cantarell-BoldItalic.d3505c3a556147af9cec.ttf",
     "static/media/Cantarell-Italic.ttf": "/iching-react/static/media/Cantarell-Italic.21c9c5cb82280372fcf2.ttf",
     "static/media/Cantarell-Bold.ttf": "/iching-react/static/media/Cantarell-Bold.5c7329ad5a3825dd5e7a.ttf",
@@ -71,11 +71,11 @@
     "static/media/Hexagrama46.md": "/iching-react/static/media/Hexagrama46.69a2ba47f0a0781d0ada.md",
     "static/media/Hexagrama52.md": "/iching-react/static/media/Hexagrama52.e9d9626e7c8202cfb4b2.md",
     "index.html": "/iching-react/index.html",
-    "main.3b6c5d5a.css.map": "/iching-react/static/css/main.3b6c5d5a.css.map",
-    "main.5076c7be.js.map": "/iching-react/static/js/main.5076c7be.js.map"
+    "main.fdc63853.css.map": "/iching-react/static/css/main.fdc63853.css.map",
+    "main.7cc46a91.js.map": "/iching-react/static/js/main.7cc46a91.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b6c5d5a.css",
-    "static/js/main.5076c7be.js"
+    "static/css/main.fdc63853.css",
+    "static/js/main.7cc46a91.js"
   ]
 }
