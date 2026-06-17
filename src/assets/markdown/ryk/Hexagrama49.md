@@ -5,7 +5,7 @@ Destaca que cambiar radicalmente y renovar el modo en que te presentas es la
 manera adecuada de manejarla. Para estar de acuerdo con el momento, se te
 dice: ¡desuella!
 
-## Imagen de la situación
+## Imagen de la Situación
 
 > Desollar: sol precenital, por-tanto conformidad.
 > 

@@ -35,7 +35,7 @@ CHI: conduce a la experiencia de la trascendencia; favorable, significativo,
 ventajoso, adecuado; palabra clave. El ideograma: erudito y boca, palabras
 doctas de un sabio.
 
-## Aspectos Exterior e-Interior
+## Aspectos Exterior e Interior
 
 Abierto: él vapor que se eleva de la superficie abierta de la laguna
 estimula y fertiliza; las palabras estimulantes alegran e inspiran. Lo Abierto

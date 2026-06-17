@@ -114,7 +114,7 @@ del hogar; tropas itinerantes; residentes temporarios; visitante, huésped,
 pensionista. El ideograma: estandarte y gente a su alrededor, leal a un símbolo
 antes que a su residencia temporaria. La Imagen del Hexagrama 56.
 
-# Tradición del Símbolo
+## Tradición del Símbolo
 
 > El trueno, el relámpago, todo culminando. Abundar.
 > 

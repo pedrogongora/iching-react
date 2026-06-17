@@ -86,7 +86,7 @@ PI: inevitablemente, indispensablemente, con seguridad.
 La anterior... el uso-de: activar este hexagrama depende de que se
 comprenda y acepte la afirmación previa.
 
-##  Definiciones Contrastadas
+## Definiciones Contrastadas
 
 > El Pozo: interpenetrar y-también
 > 

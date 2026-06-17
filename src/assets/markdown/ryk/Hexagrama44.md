@@ -5,7 +5,7 @@ primitivas. Destaca que desentrañar tu situación personal como conexión de
 fuerzas objetivas es la manera adecuada de manejarla. Para estar de acuerdo
 con el momento, se te dice: ¡acopla!
 
-##Imagen de la Situación
+## Imagen de la Situación
 
 > Acoplar, femineidad vigorizante.
 > 
@@ -196,7 +196,7 @@ que se adecúa a las normas; las cosas en su correcto lugar; el corazón que se
 gobierna a sí mismo; probo, regla moral; contrasta con Cosecha, LIU, ventaja
 o ganancia.
 
-##  Líneas en Transformación
+## Líneas en Transformación
 
 ### Seis inicial
 

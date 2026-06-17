@@ -133,7 +133,7 @@ Enseñar, CHIAO: instruir, mostrar; precepto, doctrina. Asuntos, SHIH:
 todo tipo de actividad personal; asuntos entre manos, negocios, ocupación;
 administrar un negocio, caso en tribunales.
 
-## Imagen
+## Tradición de la Imagen
 
 > Repetir el Barranco. [I]
 > 

@@ -1,4 +1,4 @@
-# 54. AUN - NO CRUZAR | WEI CHI
+# 64. AÚN NO CRUZAR | WEI CHI
 
 Este hexagrama describe tu situación como estar en el umbral de un importante
 cambio de situación. Destaca quelesperar y acumular energía para iniciar el
@@ -94,7 +94,7 @@ final definitivo. El ideograma: capullos de seda, seguir y hielo, invierno que
 enlaza un año con el siguiente. En-verdad, YEN: la expresión está completa y
 es correcta.
 
-## Definiciones Contrastabas
+## Definiciones Contrastadas
 
 > Ya Cruzar: poner-orden por-cierto.
 > 

@@ -5,7 +5,7 @@ tensiones. Destaca que analizar y comprender las cosas a fin de liberarse de la
 compulsión es la manera adecuada de manejarla. Para estar de acuerdo con el
 momento, se te dice: ¡desintegra las cosas!
 
-# Imagen de la Situación
+## Imagen de la Situación
 
 > Desintegrar. Cosechante: Sudoeste.
 > 
@@ -45,7 +45,7 @@ tiempo del presente al pasado; tener una meta o propósito específicos. Aurora,
 SU: primera luz, después del alba; temprano por la mañana; atención temprana
 y cuidadosa.
 
-## Aspectos Interior y Exterior
+## Aspectos Exterior e Interior
 
 Conmoción: El trueno se eleva desde abajo, sacudiendo y agitando las
 cosas. Conmoción inicia el hemiciclo yang al germinar la acción nueva.

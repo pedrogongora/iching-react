@@ -73,7 +73,7 @@ contrario.
 La anterior... se-vale-de: activar este hexagrama depende de que se
 comprenda y acepte la afirmación previa,
 
-## Definiciones contrastadas
+## Definiciones Contrastadas
 
 > Polarizar: afuera por-cierto.
 > 

@@ -5,7 +5,7 @@ u obstáculo. Destaca que detenerse y reconocer el límite, la acción de la
 Restricción, es la manera adecuada de manejarla. Para estar de acuerdo con el
 momento, se te dice: ¡Detente!
 
-## Imagen de la situación
+## Imagen de la Situación
 
 > Restricción: la espalda de uno.
 > 

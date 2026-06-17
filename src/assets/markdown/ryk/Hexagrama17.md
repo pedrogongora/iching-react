@@ -218,7 +218,7 @@ y justo, lo que se adecúa a las normas; las cosas en su correcto lugar; el cora
 que se gobierna a sí mismo; probo, regla moral; contrasta con Cosecha, LIU,
 ventaja o ganancia.
 
-## Lineasen Transformación
+## Líneas en Transformación
 
 ### Nueve inicial
 

@@ -89,7 +89,7 @@ seguridad.
 La anterior... el-uso-de: activar este hexagrama depende de que se
 comprenda y acepte la afirmación previa.
 
-## Defiiliciones Contrastadas
+## Definiciones Contrastadas
 
 > Ya Cruzar: poner-orden por-cierto.
 > 

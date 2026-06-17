@@ -148,7 +148,7 @@ Imagen de los Hexagramas 28 y 62. Reparar, KAI: corregir, reformar, renovar,
 alterar, remendar. El ideograma: uno mismo y golpear, luchar con los propios
 errores.
 
-# Tradición de la Imagen
+## Tradición de la Imagen
 
 > Arriba disminuyendo, abajo Aumentando. [I]
 > 

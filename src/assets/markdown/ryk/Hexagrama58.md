@@ -5,7 +5,7 @@ que estimular las cosas mediante un discurso animoso y persuasivo, la acción
 de lo Abierto es la manera adecuada de manejarla. Para estar de acuerdo con
 el momento, se te dice: ¡estimula!
 
-# Imagen de la Situación
+## Imagen de la Situación
 
 > Lo Abierto, Crecimiento.
 > 

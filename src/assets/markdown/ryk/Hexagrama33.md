@@ -1,4 +1,4 @@
-#  33. LA RETIRADA | TUN
+# 33. LA RETIRADA | TUN
 
 Este hexagrama describe tu situación como un conflicto y el consiguiente retiro.
 Destaca que retirarte de los asuntos que tienes entre manos para ocultarte en la

@@ -228,7 +228,7 @@ rendir fruto; cumplir, acceder, seguir, obedecer; sin resistencia, dócil, flexi
 nutrir, proveer; la Acción del trigrama Campo, K'UN. El ideograma: cabeza y
 corriente, agua que fluye de la cabecera de un río, siguiendo las riberas.
 
-## Lineasen Transformación
+## Líneas en Transformación
 
 ### Seis inicial
 

@@ -61,7 +61,7 @@ El doble trigrama nuclear Campo, K'UN, da como resultado el Hexagrama
 Contrario 2, Campo, K'UN. Tragar activamente e ingerir cosas contrasta con
 la pasiva receptividad del Campo.
 
-## Secuericia
+## Secuencia
 
 > Seres acumulando por-ende después permitiendo sustentar.
 > 
